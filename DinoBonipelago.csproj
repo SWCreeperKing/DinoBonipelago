@@ -1,0 +1,620 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>DinoBonipelago</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>DinoBonipelago</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="BakeryAPV">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\BakeryAPV.dll</HintPath>
+		</Reference>
+		<Reference Include="BakeryECS">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\BakeryECS.dll</HintPath>
+		</Reference>
+		<Reference Include="BakeryRuntimeAssembly">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\BakeryRuntimeAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="com.rlabrecque.steamworks.net">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\com.rlabrecque.steamworks.net.dll</HintPath>
+		</Reference>
+		<Reference Include="DinoMuseum">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\DinoMuseum.dll</HintPath>
+		</Reference>
+		<Reference Include="DinoMuseum.Localization">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\DinoMuseum.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="DinoMuseum.Trailer.Authoring">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\DinoMuseum.Trailer.Authoring.dll</HintPath>
+		</Reference>
+		<Reference Include="FMODUnity">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\FMODUnity.dll</HintPath>
+		</Reference>
+		<Reference Include="FMODUnityHaptics">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\FMODUnityHaptics.dll</HintPath>
+		</Reference>
+		<Reference Include="FMODUnityResonance">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\FMODUnityResonance.dll</HintPath>
+		</Reference>
+		<Reference Include="IndieSouls.Audio.Fmod">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\IndieSouls.Audio.Fmod.dll</HintPath>
+		</Reference>
+		<Reference Include="IndieSouls.Feedback">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\IndieSouls.Feedback.dll</HintPath>
+		</Reference>
+		<Reference Include="IndieSouls.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\IndieSouls.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="IndieSouls.Steam">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\IndieSouls.Steam.dll</HintPath>
+		</Reference>
+		<Reference Include="IndieSouls.UI.Noesis">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\IndieSouls.UI.Noesis.dll</HintPath>
+		</Reference>
+		<Reference Include="io.betahub.bugreporter">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\io.betahub.bugreporter.dll</HintPath>
+		</Reference>
+		<Reference Include="io.sentry.unity.runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\io.sentry.unity.runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="MalbersAnimations.Cinemachine">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\MalbersAnimations.Cinemachine.dll</HintPath>
+		</Reference>
+		<Reference Include="MalbersAnimations">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\MalbersAnimations.dll</HintPath>
+		</Reference>
+		<Reference Include="MalbersAnimations.Editor">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\MalbersAnimations.Editor.dll</HintPath>
+		</Reference>
+		<Reference Include="MalbersAnimations.InputSystem">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\MalbersAnimations.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="NewAssembly">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\NewAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="Newtonsoft.Json">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Noesis.NoesisGUI">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Noesis.NoesisGUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Pinwheel.Beam.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Pinwheel.Beam.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.Microsoft.Bcl.AsyncInterfaces">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Buffers">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Buffers.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Collections.Immutable">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Collections.Immutable.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Memory">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Memory.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Numerics.Vectors">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Numerics.Vectors.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Reflection.Metadata">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Reflection.Metadata.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Runtime.CompilerServices.Unsafe">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Text.Encodings.Web">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Text.Encodings.Web.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Text.Json">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Text.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.System.Threading.Tasks.Extensions">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.System.Threading.Tasks.Extensions.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.Unity">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.Unity.iOS">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.Unity.iOS.dll</HintPath>
+		</Reference>
+		<Reference Include="Sentry.Unity.Native">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Sentry.Unity.Native.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Common.Demo">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Common.Demo.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Common.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Common.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.Demo">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.Demo.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.DLSS4">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.DLSS4.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.Framework.Runtime.Core">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.Framework.Runtime.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.Framework.Runtime.URP">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.Framework.Runtime.URP.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.FSR3">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.FSR3.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.MetalFX">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.MetalFX.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.SGSR1">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.SGSR1.dll</HintPath>
+		</Reference>
+		<Reference Include="TND.Upscaling.SGSR2">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\TND.Upscaling.SGSR2.dll</HintPath>
+		</Reference>
+		<Reference Include="uLoopMCP.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\uLoopMCP.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.AI.Navigation">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.AI.Navigation.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Cinemachine">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Cinemachine.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Collections.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.LowLevel.ILSupport">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.Tests.CoreCLR.InternalJobNestedPrivate">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Collections.Tests.CoreCLR.InternalJobNestedPrivate.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.Tests.CoreCLR.PrivateJobNested">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Collections.Tests.CoreCLR.PrivateJobNested.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.Tests.CoreCLR.ProtectedJobNested">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Collections.Tests.CoreCLR.ProtectedJobNested.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.Tests.CoreCLR.PublicJobPrivateGeneric">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Collections.Tests.CoreCLR.PublicJobPrivateGeneric.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.GraphicTests.Performance.Universal.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.GraphicTests.Performance.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem.ForUI">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.InputSystem.ForUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.004">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.InternalAPIEngineBridge.004.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.ObjectDispatcher.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.InternalAPIEngineBridge.ObjectDispatcher.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.RenderPipelines.Core.Runtime.Shared">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.InternalAPIEngineBridge.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.MemoryProfiler">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.MemoryProfiler.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Multiplayer.Center.Common">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Multiplayer.Center.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.PathTracing.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.PathTracing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Postprocessing.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Postprocessing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Profiling.Core">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Profiling.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Recorder.Base">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Recorder.Base.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Recorder">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Recorder.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.GPUDriven.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.2D.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.Universal.2D.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Config.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.Universal.Config.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Shaders">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Scripting">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Scripting.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Serialization">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Splines">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Splines.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.SurfaceCache.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.SurfaceCache.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.UnifiedRayTracing.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.UnifiedRayTracing.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualEffectGraph.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.Core">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.VisualScripting.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.DocCodeExamples">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.VisualScripting.DocCodeExamples.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.Flow">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.VisualScripting.Flow.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.State">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Unity.VisualScripting.State.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityCLILoop.PausePoints.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityCLILoop.PausePoints.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityCLILoop.Runtime">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityCLILoop.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AdaptivePerformanceModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AdaptivePerformanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AMDModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AMDModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.BurstModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.BurstModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClusterInputModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClusterRendererModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HierarchyCoreModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.HierarchyCoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HierarchyModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.HierarchyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IdentifiersModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.IdentifiersModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputForUIModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.InputForUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InsightsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.InsightsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ManagedKernelModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ManagedKernelModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MarshallingModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.MarshallingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MathematicsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.MathematicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.MultiplayerModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.MultiplayerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.NVIDIAModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.NVIDIAModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsBackendPhysXModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.PhysicsBackendPhysXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsCore2DModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.PhysicsCore2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RenderAs2DModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.RenderAs2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScriptingModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ScriptingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ShaderRuntimeModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ShaderRuntimeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TetgenModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TetgenModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TimelineFoundationModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TimelineFoundationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.U2DRuntimeModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.U2DRuntimeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConsentModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityConsentModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VectorGraphicsModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.VectorGraphicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VirtualTexturingModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.VirtualTexturingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\MelonLoader\net35\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\MelonLoader\net35\0Harmony.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="CopyPastas\DebugWindow.cs" />
+		<Compile Include="CopyPastas\GameobjExtensions.cs" />
+		<Compile Include="CopyPastas\GuiBuilder.cs" />
+		<Compile Include="CopyPastas\GuiUpdaterinator.cs" />
+		<Compile Include="CopyPastas\HarmonySetup.cs" />
+		<Compile Include="CopyPastas\Inspector.cs" />
+		<Compile Include="CopyPastas\KeyRegistry.cs" />
+		<Compile Include="Core.cs" />
+		<Compile Include="Patches\Debug\GrabData.cs" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\Mods&quot;" />
+	</Target>
+</Project>
