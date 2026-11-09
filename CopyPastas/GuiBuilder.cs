@@ -17,7 +17,8 @@ public abstract class GuiBuilder
             InitGUI();
         }
 
-        OnGUI();
+        try { OnGUI(); }
+        catch (Exception e) { Core.Log.Error(e); }
     }
 }
 
@@ -149,11 +150,10 @@ public class HBox(float padding = 3) : IGuiElement
 
 public class ScrollBox(int height, float padding = 3) : IGuiElement
 {
-    private static Rect DragSize = new(0, 0, 10000, 20);
     private Rect? ScrollRect;
     private Rect? VisibleRect;
     private Vector2 ScrollPos = Vector2.zero;
-    
+
     public List<IGuiElement> Children = [];
 
     public void Render(ref float x, ref float y, float w)
@@ -161,18 +161,19 @@ public class ScrollBox(int height, float padding = 3) : IGuiElement
         ScrollRect ??= new Rect(0, 0, w, height);
         VisibleRect ??= new Rect(0, 0, w - 40, height - 40);
 
-        VisibleRect = VisibleRect.Value with { width = w + x};
+        VisibleRect = VisibleRect.Value with { width = w + x - 40, height = height + y - 40 };
         ScrollPos = GUI.BeginScrollView(VisibleRect.Value, ScrollPos, ScrollRect.Value);
-        
+
         RenderChildren(x, y, w, true, out _, out _, out var h);
-        
+
         GUI.EndScrollView();
         ScrollRect = ScrollRect.Value with { height = h, width = w };
 
-        y += height + 40;
+        y += height;
     }
 
-    private void RenderChildren(float x, float y, float w, bool isChildrenRelative, out float xPos, out float yPos, out float h)
+    private void RenderChildren(float x, float y, float w, bool isChildrenRelative, out float xPos, out float yPos,
+        out float h)
     {
         xPos = (isChildrenRelative ? x : 0) + padding;
         yPos = (isChildrenRelative ? y : 0) + padding;
@@ -185,7 +186,7 @@ public class ScrollBox(int height, float padding = 3) : IGuiElement
 
         h = yPos - (isChildrenRelative ? y : 0);
     }
-    
+
     public ScrollBox AddChild(IGuiElement children)
     {
         Children.Add(children);

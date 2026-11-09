@@ -27,6 +27,9 @@
 		<Reference Include="BakeryRuntimeAssembly">
 			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\BakeryRuntimeAssembly.dll</HintPath>
 		</Reference>
+		<Reference Include="BundledApClient">
+		  <HintPath>Lib\BundledApClient.dll</HintPath>
+		</Reference>
 		<Reference Include="com.rlabrecque.steamworks.net">
 			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\com.rlabrecque.steamworks.net.dll</HintPath>
 		</Reference>
@@ -83,9 +86,6 @@
 		</Reference>
 		<Reference Include="NewAssembly">
 			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\NewAssembly.dll</HintPath>
-		</Reference>
-		<Reference Include="Newtonsoft.Json">
-			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Newtonsoft.Json.dll</HintPath>
 		</Reference>
 		<Reference Include="Noesis.NoesisGUI">
 			<HintPath>D:\Programs\steam\steamapps\common\DinoBones Tidy Up the Museum\DinoBones_Data\Managed\Noesis.NoesisGUI.dll</HintPath>
@@ -603,6 +603,10 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Include="Archipelago\ApData.cs" />
+		<Compile Include="Archipelago\APGui.cs" />
+		<Compile Include="Archipelago\ItemHandler.cs" />
+		<Compile Include="Archipelago\BoneClient.cs" />
 		<Compile Include="CopyPastas\DebugWindow.cs" />
 		<Compile Include="CopyPastas\GameobjExtensions.cs" />
 		<Compile Include="CopyPastas\GuiBuilder.cs" />
@@ -612,6 +616,9 @@
 		<Compile Include="CopyPastas\KeyRegistry.cs" />
 		<Compile Include="Core.cs" />
 		<Compile Include="Patches\Debug\GrabData.cs" />
+		<Compile Include="Patches\PlacePatch.cs" />
+		<Compile Include="Patches\PryPatch.cs" />
+		<Compile Include="Patches\SavePatch.cs" />
 	</ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">

@@ -11,10 +11,7 @@ public static class GameobjExtensions
         var count = transform.childCount;
         var children = new GameObject[count];
 
-        for (var i = 0; i < count; i++)
-        {
-            children[i] = transform.GetChild(i).gameObject;
-        }
+        for (var i = 0; i < count; i++) { children[i] = transform.GetChild(i).gameObject; }
 
         return children;
     }
@@ -41,8 +38,17 @@ public static class GameobjExtensions
         var value = fieldInfo.GetValue(obj);
         if (value is null && printErr) throw new ArgumentException($"Value for [{field}] is null");
         return (TOut)value;
-        
     }
+    
+    public static TOut GetPublicField<TOut>(this object obj, string field, bool printErr = true)
+    {
+        var fieldInfo = obj.GetType().GetField(field, BindingFlags.Public | BindingFlags.Instance);
+        if (fieldInfo is null) throw new ArgumentException($"Field [{field}] is null");
+        var value = fieldInfo.GetValue(obj);
+        if (value is null && printErr) throw new ArgumentException($"Value for [{field}] is null");
+        return (TOut)value;
+    }
+
     public static TOut GetPrivateProperty<TOut>(this object obj, string field)
     {
         var fieldInfo = obj.GetType().GetProperty(field, BindingFlags.NonPublic | BindingFlags.Instance);

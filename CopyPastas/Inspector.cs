@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using Key = UnityEngine.InputSystem.Key;
+using Object = UnityEngine.Object;
 
 namespace DinoBonipelago.CopyPastas;
 
@@ -8,6 +9,7 @@ public class Inspector(bool keyboardInput = false) : GuiBuilder
 {
     public bool Show = false;
     public bool Cached = false;
+    public bool GrabDontDestroy;
     public GameObject[] RootObjects;
     public GameObject[] InspectObjects;
     public GameObject CurrentObj;
@@ -21,6 +23,11 @@ public class Inspector(bool keyboardInput = false) : GuiBuilder
         SceneManager.activeSceneChanged += (cur, next) => Cached = false;
         KeyRegistry.TryAddKey(KeyCode.Z, Key.Z, () => Show = !Show);
         KeyRegistry.TryAddKey(KeyCode.Delete, Key.Delete, () => Cached = false);
+        KeyRegistry.TryAddKey(KeyCode.Backslash, Key.Backslash, () =>
+        {
+            GrabDontDestroy = !GrabDontDestroy;
+            Cached = false;
+        });
         KeyRegistry.TryAddKey(KeyCode.F5, Key.F5, ToggleMouse);
 
         if (!keyboardInput) return;
@@ -38,9 +45,20 @@ public class Inspector(bool keyboardInput = false) : GuiBuilder
         if (!Show) return;
         if (!Cached)
         {
-            RootObjects = SceneManager.GetActiveScene().GetRootGameObjects();
+            Scene scene;
+            
+            if (!GrabDontDestroy) scene = SceneManager.GetActiveScene();
+            else
+            {
+                GameObject temp = new();
+                Object.DontDestroyOnLoad(temp);
+                scene = temp.scene;
+                Object.DestroyImmediate(temp);
+            }
+            
+            RootObjects = scene.GetRootGameObjects();
 
-            SceneView = new ScrollWindow(0, 50, 50, 240, 400, "Scene View", dragable: true);
+            SceneView = new ScrollWindow(0, 50, 50, 240, 400, $"Scene View [{scene.name}]", dragable: true);
             for (var i = 0; i < RootObjects.Length; i++)
             {
                 var i1 = i;
