@@ -4,7 +4,7 @@ using HarmonyLib;
 
 namespace DinoBonipelago.Patches.Debug;
 
-[PatchAll]
+// [PatchAll]
 public static class GrabData
 {
     public static HashSet<string> Bones = [];
