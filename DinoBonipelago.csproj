@@ -603,6 +603,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Include="Added\TrackingUI.cs" />
 		<Compile Include="Archipelago\ApData.cs" />
 		<Compile Include="Archipelago\APGui.cs" />
 		<Compile Include="Archipelago\ItemHandler.cs" />

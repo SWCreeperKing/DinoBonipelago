@@ -14,7 +14,9 @@ public static class PlacePatch
     {
         var bone = f.GetPublicField<BoneBody>("Bone");
         var label = bone.Label;
-        BoneClient.SendLocation($"Place {label.Species} {label.Region}: {label.Bone.Replace('·', '-')}");
+        var location = $"Place {label.Species} {label.Region}: {label.Bone.Replace('·', '-')}";
+        if (BoneClient.BoneCrates.TryGetValue(location, out var crate)) location = $"{location} (Crate {crate})";
+        BoneClient.SendLocation(location);
         BoneClient.CheckGoal();
     }
 }

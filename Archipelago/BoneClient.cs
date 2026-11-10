@@ -10,6 +10,7 @@ namespace DinoBonipelago.Archipelago;
 public static class BoneClient
 {
     public static Dictionary<string, string> CratePathToCrate = [];
+    public static Dictionary<string, int> BoneCrates = [];
         
     public static ApClient Client = new(new TimeSpan(0, 1, 0));
     public static ApData Data = new();

@@ -1,4 +1,5 @@
-﻿using DinoBonipelago.Archipelago;
+﻿using DinoBonipelago.Added;
+using DinoBonipelago.Archipelago;
 using DinoBonipelago.CopyPastas;
 using MelonLoader;
 
@@ -9,10 +10,12 @@ namespace DinoBonipelago;
 
 public class Core : MelonMod
 {
-    public static MelonLogger.Instance Log;
     public const string DataFolder = "Mods/SW_CreeperKing.DinoBonipelago/Data";
+
+    public static MelonLogger.Instance Log;
     public static string Scene;
     public static APGui APGui = new();
+    public static TrackingUI TrackingUI = new();
 
     public override void OnInitializeMelon()
     {
@@ -23,16 +26,24 @@ public class Core : MelonMod
         BoneClient.CratePathToCrate = File.ReadAllLines($"{DataFolder}/bonepaths.txt").Select(s => s.Split('|'))
                                           .ToDictionary(arr => arr[1], arr => arr[0]);
 
+        BoneClient.BoneCrates = File.ReadAllLines($"{DataFolder}/bonecrates.txt").Select(s => s.Split('|'))
+                                    .ToDictionary(arr => arr[0], arr => int.Parse(arr[1]));
+
         BoneClient.Init();
-        
+
         Log.Msg("Initialized.");
     }
 
-    public override void OnUpdate() => BoneClient.Update();
+    public override void OnUpdate()
+    {
+        KeyRegistry.Update();
+        BoneClient.Update();
+    }
 
     public override void OnGUI()
     {
         if (Scene is not "Museum") APGui.Render();
+        if (Scene is "Museum") TrackingUI.Render();
     }
 
     public override void OnSceneWasLoaded(int buildIndex, string sceneName)

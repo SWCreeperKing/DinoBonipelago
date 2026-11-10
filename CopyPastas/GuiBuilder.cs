@@ -231,6 +231,12 @@ public class Label(TextRef text, float height, Color? color = null, int fontSize
         GUI.Label(Rect with { x = x, y = y, width = w, height = height }, text, Style);
         y += height;
     }
+
+    public void SetColor(Color? c = null)
+    {
+        if (Style.normal.textColor == c) return;
+        Style = new GUIStyle { fontSize = fontSize, alignment = alignment, normal = { textColor = c ?? Color.white }, };
+    }
 }
 
 public class TextField(SetterGetter<string> text, float height) : IGuiElement
